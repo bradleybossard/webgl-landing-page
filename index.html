@@ -13,7 +13,24 @@
   </head>
   <body>
     <script>
-      // 3D Code goes here
+      var num=30;
+      var objects=[];
+      var raycaster = new THREE.Raycaster();
+      var mouse = new THREE.Vector2();
+      var light,t;
+
+      // create camera
+      var camera = new THREE.PerspectiveCamera(65, window.innerWidth/window.innerHeight, 0.1, 1000 );
+      camera.position.set(0.0,0.0,5);
+
+      // create a scene
+      var scene = new THREE.Scene();
+
+      // create renderer
+      var renderer = new THREE.WebGLRenderer({antialias:true});
+      renderer.setSize( window.innerWidth, window.innerHeight );
+      document.body.appendChild( renderer.domElement);
+
     </script>
   </body>
 </html>
